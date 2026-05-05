@@ -1,13 +1,21 @@
 
-<div class="divsuperheroes">
+<div class="divhero">
+
     <h1>Lista de Superhéroes</h1>
+
 </div>
 
+<% if (success) { %>
+        <p style="color: green;">Superhéroes agregado correctamente</p>
+    <% } %>
 
-<div class="divsuperheroes">
         <ul>
-            <% superheroes.forEach(hero => { %>
-            <li><%= hero.nombre %></li>
-            <% }); %>
+            <% superheroes.forEach((hero, index) => { %>
+                <li>
+                    <%= hero.nombre %>
+
+                    <a href="/edit/<%= index %>">Editar</a>
+                    <a href="/delete/<%= index %>">Eliminar</a>
+                </li>
+            <% }) %>
         </ul>
-</div>
