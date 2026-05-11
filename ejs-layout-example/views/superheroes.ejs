@@ -1,21 +1,37 @@
+<h1>Lista de Superhéroes</h1>
 
-<div class="divhero">
+<div class="heroes-container">
 
-    <h1>Lista de Superhéroes</h1>
-
-</div>
-
-<% if (success) { %>
+    <% if (success) { %>
         <p style="color: green;">Superhéroes agregado correctamente</p>
     <% } %>
 
-        <ul>
-            <% superheroes.forEach((hero, index) => { %>
-                <li>
-                    <%= hero.nombre %>
+    <% superheroes.forEach((hero, index) => { %>
 
-                    <a href="/edit/<%= index %>">Editar</a>
-                    <a href="/delete/<%= index %>">Eliminar</a>
-                </li>
+        <div class="hero-card">
+
+                    <div class="hero-info">
+
+                    <p>Nombre Superheroe: <%= hero.nombreSuperHeroe %></p>
+
+                    <p>Nombre Real: <%= hero.nombreReal %></p>
+
+                    <p>Edad: <%= hero.edad %></p>
+
+                    <p>Planeta Origen: <%= hero.planetaOrigen %></p>
+
+                    <p>Poderes: <%= hero.poderes %></p>
+
+                    </div>
+
+                    <div class="hero-action">
+                        <a href="/edit/<%= index %>" class="edit-btn">Editar</a>
+
+                    <a href="/delete/<%= index %>"  class="delete-btn">Eliminar</a>
+                    </div>
+
+        </div>
+
             <% }) %>
-        </ul>
+
+</div>

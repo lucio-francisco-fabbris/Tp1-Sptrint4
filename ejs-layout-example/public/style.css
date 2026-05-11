@@ -1,90 +1,186 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    background-color: #f4f4f4;
+    padding: 0;
+    background: #f4f4f4;
+    color: #222;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
 }
 
 .navbar {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(194, 0, 0);
-    padding: 15px;
+    background: #c20000;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 .navbar ul {
     display: flex;
+    gap: 25px;
     list-style: none;
-    gap: 30px;
     margin: 0;
     padding: 0;
 }
 
-.navbar ul li a {
-    color: black;;
-    font-weight: bold;
-}
-
-.navbar ul li a:hover {
-    color: #ffdada;
-}
-
-main {
-    padding: 30px;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    background-color: white;
-    margin-bottom: 10px;
-    padding: 12px;
-    border-radius: 8px;
-    display: flex;justify-content: space-between;
-    align-items: center;
-}
-
-li a {
-    margin-left: 10px;
+.navbar a {
+    background: white;
+    color: #c20000;
     text-decoration: none;
-    font-size: 18px;
+    padding: 12px 25px;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-form input {
-    padding: 8px;
-    margin-right: 10px;
+.navbar a:hover {
+    background: #ffe3e3;
+    transform: translateY(-2px);
 }
 
-form button {
-    padding: 8px 12px;
-    background: rgb(194, 0, 0);
+h1 {
+    text-align: center;
+    margin: 40px 0;
+    font-size: 42px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin-left: 40px;
+}
+
+input {
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    width: 300px;
+    font-size: 15px;
+}
+
+button {
+    background: #c20000;
     color: white;
     border: none;
-    border-radius: 5px;
+    padding: 14px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-form button:hover {
-    background: rgb(150, 0, 0);
+button:hover {
+    background: #930000;
+    transform: scale(1.05);
 }
 
-.divhero {
+.hero-card {
+    background: white;
+    border-radius: 18px;
+    margin: 20px auto;
+    width: 85%;
+    padding: 25px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     
 }
 
-section {
-    padding: 110px;
+.hero-card:hover {
+    transform: translateY(-5px);
+}
+
+.hero-info p {
+    margin: 8px 0;
+    font-size: 18px;
+}
+
+.hero-action {
+    display: flex;
+    gap: 15px;
+}
+
+.hero-action a {
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+.edit-btn {
+    background: #0077ff;
+}
+
+.delete-btn {
+    background: #e60000;
+}
+
+.hero-action a:hover {
+    opacity: 0.85;
+}
+
+.hero-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.success {
+    text-align: center;
+    color: green;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.inicio {
+    text-align: center;
+    color: #000000;
+}
+
+.cards-inicio {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    width: 250px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    color: #c20000;
 }
 
 footer {
     text-align: center;
-    background-color: rgb(194, 0, 0);
+    background: #c20000;
     color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    padding: 10px;
+    margin-top: 40px;
 }
+

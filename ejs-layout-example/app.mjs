@@ -33,14 +33,14 @@ app.get('/add', (req, res) => {
 });
 
 app.post('/add', (req, res) => {
-    const { nombre } = req.body;
+    const { nombreSuperHeroe, nombreReal, edad, planetaOrigen, poderes } = req.body;
 
     console.log(superheroes);
 
-    if (!nombre || nombre.trim() === '') {
+    if (!nombreSuperHeroe || nombreSuperHeroe.trim() === '') {
         return res.render('addSuperhero', {title: 'Agregar', navbar, error: 'El nombre es obligatorio'});
     }
-    superheroes.push({ nombre });
+    superheroes.push({ nombreSuperHeroe, nombreReal, edad, planetaOrigen, poderes });
 
         res.redirect('/superheroes?success=1');
 });

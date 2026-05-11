@@ -4,7 +4,11 @@
 
 <div class="divhero">
     <form action="/edit/<%= index %>" method="post">
-        <input type="text" name="nombre" value="<%= hero.nombre %>">
+        <input type="text" name="nombreSuperHeroe" value="<%= hero.nombreSuperHeroe %>">
+        <input type="text" name="nombre Real" value="<%= hero.nombreReal %>">
+        <input type="number" name="edad" value="<%= hero.edad %>">
+        <input type="text" name="planetaOrigen" value="<%= hero.planetaOrigen %>">
+        <input type="text" name="poderes" value="<%= hero.poderes %>">
         <button type="submit">Guardar</button>
     </form>
 </div>
