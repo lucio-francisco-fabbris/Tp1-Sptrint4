@@ -61,16 +61,13 @@ app.get('/edit/:index', (req, res) => {
 
 app.post('/edit/:index', (req, res) => {
     const index = req.params.index;
-    const { nombre } = req.body;
+    const { nombreSuperHeroe, nombreReal, edad, planetaOrigen, poderes } = req.body;
 
-    superheroes[index].nombre = nombre;
+    superheroes[index] = {nombreSuperHeroe, nombreReal, edad, planetaOrigen, poderes};
 
     res.redirect('/superheroes');
 
-})
-
-
-
+});
 
 app.listen(PORT, () => {
     console.log(`Servidor escuchando en http://localhost:${PORT}`);
